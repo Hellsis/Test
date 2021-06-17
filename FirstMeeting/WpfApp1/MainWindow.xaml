@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="300*"/>
+            <RowDefinition Height="60*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="Black"></Grid>
+        <Grid Grid.Row="2" Background="DarkGray"></Grid>
+        <Label Content="Приложение" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"></Label>
+        <Frame Grid.Row="1" Name="frame" ContentRendered="frame_ContentRendered" NavigationUIVisibility="Hidden"></Frame>
+        <Button Content="Назад" HorizontalAlignment="Right" VerticalAlignment="Center" Name="Back" Click="Back_Click"></Button>
+
+    </Grid>
+</Window>

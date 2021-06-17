@@ -1,0 +1,29 @@
+﻿<Page x:Class="WpfApp1.AddAddress"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddAddress">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="241*"/>
+            <ColumnDefinition Width="399*"/>
+            <ColumnDefinition Width="160*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Клиент" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Foreground="Black"></Label>
+        <Label Content="Адресс" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Grid.Row="1" Foreground="Black"></Label>
+        <ComboBox HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="30" Grid.Column="1" SelectedItem="{Binding clients}" DisplayMemberPath="FirstName" Name="boxFirstName" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18"></ComboBox>
+        <TextBox VerticalAlignment="Center"  HorizontalAlignment="Center" Width=" 200" Height="30 " Grid.Column="1" Grid.Row="1" Text="{Binding Address1}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18"></TextBox>
+        <Button Content="Сохранить" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="2" Click="Button_Click"></Button>
+
+    </Grid>
+</Page>
